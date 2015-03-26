@@ -23,7 +23,7 @@ module Geokit
       def self.parse_xml(xml)
         loc = new_loc
         set_mappings(loc, xml.elements['geoPlugin'], XML_MAPPINGS)
-        loc.success = !!loc.city && !loc.city.empty?
+        loc.success = !!loc.country_code && !loc.country_code.empty?
         loc
       end
     end
